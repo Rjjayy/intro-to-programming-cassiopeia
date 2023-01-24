@@ -5,9 +5,9 @@
 // hint: new Date() constructor
 //  Retrieve the current year from your date object and store it in a variable named thisYear
 var today = new Date();
-console.log (today)
+console.log(today)
 var thisYear = today.getFullYear()
-console.log (today.getFullYear());
+console.log(today.getFullYear());
 
 // hint: getFullYear method
 //  Using "DOM Selection", select the <footer> element from the DOM and store it in a variable named footer
@@ -39,7 +39,7 @@ myFooter.appendChild(para)
 // Create List of Skills
 //  Open your index.js file
 //  List your technical skills by creating an Array of String values and store it in a variable named skills
-const skills = ["Research and reporting","Proficient in Microsoft Excel, Word, PowerPoint", "Intermediate Knowledge of R programming", "Beginner Knowledge Java Script"];
+const skills = ["Research and reporting", "Proficient in Microsoft Excel, Word, PowerPoint", "Intermediate Knowledge of R programming", "Beginner Knowledge Java Script"];
 //  Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
 // hint: querySelector or getElementById method
 skillsSection = document.querySelector('#skills')
@@ -52,7 +52,7 @@ console.log(skillsList)
 //  Create a for loop to iterate over your skills Array, starting at index 0
 for (let i = 0; i < skills.length; i++) {
     let skill = document.createElement("li")
-    skill.innerText = skills[i] 
+    skill.innerText = skills[i]
     skillsList.appendChild(skill)
 }
 //  Inside the loop, create a new list item (li) element and store it in a variable named skill
@@ -94,21 +94,38 @@ for (let i = 0; i < skills.length; i++) {
 //  Fill out the HTML form in your browser and hit "Submit"
 // Note: at this point, you should notice that the browser is refreshing automatically when you submit your form which is not the desired behavior
 
-let messageForm = document.getElementsByName("leave_message") 
+let messageForm = document.getElementsByName("leave_message")
 console.log(messageForm)
-messageForm[0].addEventListener("submit", function(event) { 
+messageForm[0].addEventListener("submit", function (event) {
     event.preventDefault()
-    let name= event.target.name
-    console.log(name)
-    let email= event.target.email
-    console.log(email)
-    let message= event.target.message
-    console.log(message)
-  event.target.reset()
-  let messageSection = document.getElementById("message")
-  let newMessage = document.createElement('li')
-    newMessage.innerHTML= "Hello"
+    let name = event.target.name
+    console.log(name.value) // .value hidden attrubite 
+    let email = event.target.email
+    console.log(email.value)
+    let message = event.target.message
+    console.log(message.value)
+
+    let messageSection = document.getElementById("message")
+    let newMessage = document.createElement('li')
+    newMessage.innerHTML = `<a href="mailto:${email.value}">${name.value} </a> <span>${message.value} </span>`
+    event.target.reset()
+
+
+    messageList.appendChild(newMessage)
+
+    let removeButton = document.createElement("button")
+    removeButton.innerText = "Remove"
+    removeButton.type = "button"; //attribute is the type 
+    removeButton.addEventListener("click", function () {
+        let entry = removeButton.parentNode
+        entry.remove()
+
+    })
+    newMessage.appendChild(removeButton)
 })
+
+
+
 //  Inside the callback function, above the other code you just wrote, add a new line to prevent the default refreshing behavior of the "submit" event
 // hint: preventDefault method
 //  Save and refresh your browser
