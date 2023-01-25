@@ -4,6 +4,7 @@
 <title>About Me</title>  
 
 <meta name="description" content="This is my first web page introducing myself.">
+<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
@@ -22,7 +23,7 @@
 </section>
 
 
-<ul></ul>
+<ul class="block"></ul>
 
 <h3>Connect</h3>
 <ul>
@@ -32,8 +33,8 @@
     <li><a href="www.linkedin.com/in/raheim-grant-539477179">Linkedin</a></li>
 </ul>
 <section>
-    <h2> Leave a Message </h2>
-    <form name="leave_message">
+    <h3> Leave a Message </h3>
+    <form name="leave_message" id ="leave_message">
         <label for="name">Name</label> <!--for attrubite gives the cursor thingy in box.-->
         <input type="text" name="name" id="name" required> <!--id is used for the for attrubite.-->
         <br> 
@@ -43,9 +44,8 @@
         <label for="message">Message</label>
         <textarea name="message" id="message" required> </textarea>
         <br> 
-        <button type="submit">Submit</button>
+        <button type="submit"class=button>Submit</button>
     </form>
-
 </section>
 <section>
     <h2>Message</h2>
