@@ -8,14 +8,47 @@
 </head>
 <body>
 
+
     <h1> Raheim Grant </h1>
+    <header id="websiteHeader">
+        <nav>
+            <ul>
+                <li><a href="#About Me">About</a></li>
+                <li><a href="#Experience">Experiences</li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#Contact">Connect</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <section></section>
+    
+<section id="About Me"> 
     <h2> About Me</h2>
 
     <p>My name is Raheim. I am from Jamaica and I live in Florida. I study Biology and anthropology at Florida International University.</p>
 <section></section>
+
+<section id="Experience"> 
 <h2>Experience</h2>
-<p>I have no pior experience to coding before Code the Dream School.</p>
+<div class="experience-container">
+    <div class="experience-item">
+      
+      <p>Currently an English Tutor on Amazing Talker. 
+      <li> <a href="https://en.amazingtalker.com/teachers-and-tutors/raheim-grant">Teacher Profile </a></li> </p> 
+    </div>
+  
+    <div class="experience-item">
+      <p>Volunteered as a Ecology Peer Leader at Florida International University</p>  
+      <p>January 2020 – June 2022</p> 
+      <li> <a href="https://pltl.fiu.edu/?page_id=308">April 2022 Peer Leader Spotlight</a></li> </p> 
+    </div>
+    <div class="experience-item">
+      <p>Interned  at the Marlone Disturbance Lab, Miami, worked with fellow researchers to publish a research projected titled 'Evaluating the Effects of Drought'
+      <li> <a href="https://www.researchgate.net/publication/356998471_Evaluating_the_Effects_of_Drought_Conditions_on_Area_Burned_in_the_Everglades">'Evaluating the Effects of Drought' Conditions on Burned Area'</a></li> </p>
+      <p> May – July 2021</p>  
+    </div>
+  </div>
 <section></section>
 
 <section id="skills"> 
@@ -25,6 +58,7 @@
 
 <ul class="block"></ul>
 
+<section id="Contact"> 
 <h3>Connect</h3>
 <ul>
 
@@ -34,17 +68,25 @@
 </ul>
 <section>
     <h3> Leave a Message </h3>
-    <form name="leave_message" id ="leave_message">
+    <form name="leave_message" id ="leave_message" class="form-container">
+        <div class="form-item">
         <label for="name">Name</label> <!--for attrubite gives the cursor thingy in box.-->
         <input type="text" name="name" id="name" required> <!--id is used for the for attrubite.-->
+    </div>
+    <div class="form-item">
         <br> 
         <label for="email">Email</label>
         <input type="email" name="email" id="email" required> 
+    </div>
+    <div class="form-item">
         <br> 
         <label for="message">Message</label>
         <textarea name="message" id="message" required> </textarea>
+    </div>
+    <div class="form-item">
         <br> 
         <button type="submit"class=button>Submit</button>
+    </div>
     </form>
 </section>
 <section>
