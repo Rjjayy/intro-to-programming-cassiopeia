@@ -188,7 +188,6 @@ githubRequest.addEventListener("load", function () {
         let project = document.createElement('li')
         project.innerText= repositories[index]["name"]
         projectlist.appendChild(project)
-
     }
 })
 
