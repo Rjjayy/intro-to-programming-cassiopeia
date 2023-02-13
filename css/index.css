@@ -1,0 +1,166 @@
+/* #### Write CSS
+
+For this assignment, there are some general requirements but the design is up to you! This is your chance to be creative and transform your webpage into a reflection of who you are.
+
+- [ ] Change the background color of the page body
+- [ ] Change the default text color
+- [ ] Customize the font family
+  - (Optional) Load in a font family from [Google Fonts](https://fonts.google.com/)
+- [ ] Add spacing (padding/margin) between sections
+- [ ] Change the font size, weight, and color of all headings
+- [ ] Transform the "Experience" list items into styled blocks
+- [ ] Transform the "Skills" list items into styled blocks
+- [ ] Style the "Leave a Message" form elements
+  - Change font size and color of labels
+  - Change font size, padding, border, etc. of inputs and textarea
+  - Add spacing (padding/margin) between form fields
+  - Change padding, background color, border, etc. of submit button
+- [ ] Transform the "Messages" list items into styled blocks and customize the button(s)
+- [ ] Change the spacing and background color of the footer
+- [ ] Use Media Queries to make sure the webpage is responsive for all device sizes (mobile, tablet, desktop, etc.)
+
+This is the basic rubric, but we encourage you to think beyond this list and come up with your own ideas to make your webpage unique! */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color:whitesmoke;
+    color:rgb(149, 0, 0);
+}
+section { 
+     margin-top: 20px;
+     margin-bottom: 40px;
+}
+
+h1,h2,h3{
+    color: rgb(200, 0, 255);
+    font-weight: bolder;
+}
+h1 {
+    font: size 90px;
+}
+h2 {
+    font-size: 60px;
+}
+h3 {
+    font-size: 40px;
+}
+
+.block{
+    color: black;
+}
+
+#leave_message input,textarea {
+   color: rgb(27, 12, 12);
+   margin: 20px;
+   border: 1px solid gray;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: green;
+    border: none;
+}
+
+#messageList li {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    background-color:whitesmoke;
+}
+button:hover { /* CSS Pseudo classes to change the button style on hover, active and visited state */
+    background-color:rgb(40, 37, 41);
+    cursor: pointer;
+}
+#name, #email, #message {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+footer {
+    padding: 20px;
+    background-color:aliceblue;
+}
+
+
+@media only screen and (max-width: 600px) {
+    /* CSS styles for screens smaller than 600px */
+}
+/*### Task List:
+
+For this assignment, you will be transforming your webpage with a more robust grid layout.
+
+- [ ] Add a navigational header to your webpage
+  - [ ] The navigation menu should include a link to each of your sections (i.e. "About", "Experience", etc.)
+  - [ ] (Optional) Make the header sticky/fixed on the page
+- [ ] Change the layout of your "Experience" section using rows and columns so items are displayed in a grid rather than a list
+  - [ ] Hint: use either Flexbox or CSS Grid
+- [ ] Update the "Leave a Message" form to use Flexbox or CSS Grid
+- [ ] Use Media Queries to make sure the webpage is responsive for all device sizes (mobile, tablet, desktop, etc.)*/
+
+#websiteHeader {
+    position: sticky;
+    top: 0;
+}
+nav ul {
+    display: flex;
+    justify-content:space-around;
+    list-style: none;
+   
+}
+nav li { 
+    display: contents;
+}
+nav a {
+    text-decoration: none;
+}
+.experience-container{
+    border: 4px solid black;
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.experience-item {
+    border: 4px solid blueviolet;
+    width: 30%;
+    margin: 10px;
+}
+.form-container {
+    background-color: rgb(0, 251, 255);
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-item {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+/* Styles for mobile devices */
+@media (max-width: 767px) {
+    .experience-item {
+        width: 100%;
+    }
+}
+
+/* Styles for tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+    .experience-item {
+        width: 50%;
+    }
+}
+
+/* Styles for desktop devices */
+@media (min-width: 992px) {
+    .experience-item {
+        width: 30%;
+    }
+}
+
+
+
+
+
