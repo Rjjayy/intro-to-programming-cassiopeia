@@ -34,11 +34,11 @@ section {
 }
 
 h1,h2,h3{
-    color: aqua;
+    color: rgb(200, 0, 255);
     font-weight: bolder;
 }
 h1 {
-    font: size 80px;
+    font: size 90px;
 }
 h2 {
     font-size: 60px;
@@ -52,7 +52,7 @@ h3 {
 }
 
 #leave_message input,textarea {
-   color: brown;
+   color: rgb(27, 12, 12);
    margin: 20px;
    border: 1px solid gray;
 }
@@ -70,7 +70,7 @@ input[type="submit"] {
     background-color:whitesmoke;
 }
 button:hover { /* CSS Pseudo classes to change the button style on hover, active and visited state */
-    background-color:darkviolet;
+    background-color:rgb(40, 37, 41);
     cursor: pointer;
 }
 #name, #email, #message {
