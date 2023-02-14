@@ -234,4 +234,4 @@ fetch("https://api.github.com/users/Rjjayy/repos")
       projectlist.appendChild(project);
     }
   })
-  .catch(error => console.error(error));
+  
