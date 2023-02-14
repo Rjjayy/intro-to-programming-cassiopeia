@@ -175,21 +175,22 @@ messageForm[0].addEventListener("submit", function (event) {
 
 // > Note: at this point, you have made a request to GitHub for your public repository data but nothing is being done with the data that is returned from the server
 
-let githubRequest = new XMLHttpRequest
-githubRequest.open("GET", "https://api.github.com/users/Rjjayy/repos")
-githubRequest.send()
-githubRequest.addEventListener("load", function () {
-    repositories = JSON.parse(this.response)
-    console.log(repositories)
+//let githubRequest = new XMLHttpRequest
+// githubRequest.open("GET", "https://api.github.com/users/Rjjayy/repos")
+// githubRequest.send()
+// githubRequest.addEventListener("load", function () {
+//     repositories = JSON.parse(this.response)
+//     console.log(repositories)
 
-    projectSection = document.getElementById("projects")
-    projectlist = projectSection.children[1]
-    for (let index = 0; index < repositories.length; index++) {
-        let project = document.createElement('li')
-        project.innerText= repositories[index]["name"]
-        projectlist.appendChild(project)
-    }
-})
+//     projectSection = document.getElementById("projects")
+//     projectlist = projectSection.children[1]
+//     for (let index = 0; index < repositories.length; index++) {
+//         let project = document.createElement('li')
+//         project.innerText= repositories[index]["name"]
+//         projectlist.appendChild(project)
+//     }
+// })
+
 
 
 
@@ -222,3 +223,15 @@ githubRequest.addEventListener("load", function () {
 // - Save and refresh your browser
 //   - You should see your list of repositories beneath the "Projects" heading
 
+fetch("https://api.github.com/users/Rjjayy/repos")
+  .then(response => response.json())
+  .then(repositories => {
+    projectSection = document.getElementById("projects");
+    projectlist = projectSection.children[1];
+    for (let index = 0; index < repositories.length; index++) {
+      let project = document.createElement("li");
+      project.innerText = repositories[index]["name"];
+      projectlist.appendChild(project);
+    }
+  })
+  
