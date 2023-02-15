@@ -23,9 +23,10 @@ This is the basic rubric, but we encourage you to think beyond this list and com
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
+
 body {
     font-family: 'Playfair Display', serif;
-    background-color:whitesmoke;
+    background-color:white;
     color:rgb(149, 0, 0);
 }
 section { 
@@ -34,7 +35,7 @@ section {
 }
 
 h1,h2,h3{
-    color: rgb(200, 0, 255);
+    color:orange;
     font-weight: bolder;
 }
 h1 {
@@ -99,8 +100,11 @@ For this assignment, you will be transforming your webpage with a more robust gr
 - [ ] Use Media Queries to make sure the webpage is responsive for all device sizes (mobile, tablet, desktop, etc.)*/
 
 #websiteHeader {
-    position: sticky;
+    width: 100%;
+    height: 100vh;
+
     top: 0;
+    align-self: hover;
 }
 nav ul {
     display: flex;
@@ -114,6 +118,10 @@ nav li {
 nav a {
     text-decoration: none;
 }
+
+nav ul li a:hover{
+    color:black;
+ }
 .experience-container{
     border: 4px solid black;
     background-color: aqua;
@@ -161,6 +169,59 @@ nav a {
 }
 
 
+.Intro{
+    margin-left: 10%;
+    margin-top: 5%;
+}
 
+.Intro h1{
+ font-size: 50;
+ color: black;
+ margin-bottom: 20px;
+}
+span{
+    color:orange;
+}
+.Intro{
+    color: black;
+    line-height: 25px;
+}
 
+.Intro a{
+    background: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    margin: 25px 0;
+    border-radius: 5px;
+    margin-bottom: 50px; 
+}
+.images {
+    width: 580%; /* increased width to make the images bigger */
+    height: 50%; /* decreased height to fit the images on the screen */
+    position:relative;
+    bottom: 340px; /* increased bottom value to move the images up */
+    right: -200px; /* decreased right value to move the images to the center right of the page */
+  }
+  
+.images img{
+    height:350px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translatex(-50%);
+    transition: bottom 1s, left 1s;
+}
 
+.images:hover .theflower{
+    bottom: 40px;
+}
+
+.images:hover .myface{
+    left: 45%;
+ }
+
+ .logohead{
+    140px;
+ }
