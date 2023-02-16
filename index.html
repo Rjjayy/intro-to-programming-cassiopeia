@@ -1,100 +1,84 @@
 <!DOCTYPE html>
 <html>
 
-
-
-
-
-
-
-<header>
-   
-
-
-    <meta name="description" content="This is my first web page introducing myself.">
+<head>
+    <title>Raheim's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    
 
-   
-
-    <title>About Me</title>
-    <div class="images">
-        <img src="RaheimWb/Flower.png" alt="theflower" class="theflower">
-        <img src="RaheimWb/Raheim.png" alt="myface" class="myface">
-    </div>
-
-    <section>
-    
-        <div>
-        <header id="websiteHeader">
-            <div id="logohead">
+    <div id="websiteHeader">
+        <div class="headcontainer">
             <nav>
-                <img src="RaheimWB/logo1.png" alt="Image description" width="200px" align="left">
-
+                <img src="RaheimWB/logo1.png" class="logo">
                 <ul>
+                    <li><a href="#Home">Home</a></li>
                     <li><a href="#About Me">About</a></li>
-                    <li><a href="#Experience">Experiences</li>
+                    <li><a href="#Experience">Experiences</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#Contact">Connect</a></li>
                 </ul>
             </nav>
         </div>
-        </div>
-        </header>
 
         <div class="Intro">
-            <h1>Welcome, I am Raheim<span> Grant</span></h1> 
-            <p>This is my official portfolio website,
-                <br> which provides an overview of my skills, education, and professional experience. </p>
-        
-                <a href="#D">DOWNLOAD CV</a>
-    </div>
-    </section>
-<div>
-    <section id="About Me">
-        <h2> About Me</h2>
+            <h1>Hello, I am Raheim<span> Grant</span></h1>
+            <p>This is my official portfolio website,<br> which provides an overview of my skills, education, and professional experience. </p>
+            <a href="#D">DOWNLOAD CV</a>
+        </div>
+        <div class="images">
+            <img src="RaheimWb/Flower.png" alt="theflower" class="theflower">
+            <img src="RaheimWb/Raheim.png" alt="myface" class="myface">
+        </div>
 
-        <p>My name is Raheim. I am from Jamaica and I live in Florida. I study Biology and anthropology at Florida
-            International University.</p>
-    </section>
+        <div id="aboutme">
+            <div class="container">
+                <div class="aboutrow">
+                    <div class="about-col-1">
+                        <img src="Raheimwb/Raheimflower.jpeg">
+                    </div>
+
+                    <div class="about-col-2">
+                        <h2 class="subh1"> About Me</h2>
+                        <p>My name is Raheim Grant. I am originally from Jamaica and now I live in the United States of America. An enthusiastic, passionate, and friendly student, learner, and teacher, I am dedicated to all things educational. I am always interested in learning new things, including programming languages, languages, as well as cultural and research facts. As part of my hobbies, I enjoy playing the ukulele, spending time in nature, and riding my longboard.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul class="block"></ul>
+                        </div>
+                        <div class="experience-item" id="experience">
+                            <ul>
+
+<li><span>2022 - Current</span><br>Freelance English Tutor on Amazing Talker</li>
+<li> <a href="https://en.amazingtalker.com/teachers-and-tutors/raheim-grant">My Teacher Profile </a>
+</li>
+<li><span>January 2020 – June 2022</span><br>Volunteered as a Ecology Peer Leader at Florida International University</li>
+<li> <a href="https://pltl.fiu.edu/?page_id=308">April 2022 Peer Leader Spotlight</a></li>
+<li><span> May – July 2021 </span><br> Research Interned at the Marlone Disturbance Lab. Collected, Anayslise Date and Cooperated with fellow student researchers and professor Sparkle Leigh Malone to publish a research
+    projected titled 'Evaluating the Effects of Drought'</li>
+    <li> <a
+        href="https://www.researchgate.net/publication/356998471_Evaluating_the_Effects_of_Drought_Conditions_on_Area_Burned_in_the_Everglades">'Evaluating
+        the Effects of Drought' Conditions on Burned Area'</a></li>
+</ul>
 </div>
 
-    <section id="Experience">
-        <h2>Experience</h2>
-        <div class="experience-container">
-            <div class="experience-item">
+<div class="tab-contents" id="education">
+<ul>
+<li><span>2018</span><br> Valencia Community College</li>
+<li><span>2023</span><br> Certification in Introduction to Programming </li>
+<li><span>Current</span><br> Bachelor's degree in Biological Science and Anthropology and Sociology at Florida International University</li>
+</ul>
 
-                <p>Currently an English Tutor on Amazing Talker.
-                    <li> <a href="https://en.amazingtalker.com/teachers-and-tutors/raheim-grant">Teacher Profile </a>
-                    </li>
-                </p>
-            </div>
-          
-            <div class="experience-item">
-                <p>Volunteered as a Ecology Peer Leader at Florida International University</p>
-                <p>January 2020 – June 2022</p>
-                <li> <a href="https://pltl.fiu.edu/?page_id=308">April 2022 Peer Leader Spotlight</a></li>
-                </p>
-            </div>
-            <div class="experience-item">
-                <p>Interned at the Marlone Disturbance Lab, Miami, cooperated with fellow student researchers and professor Sparkle Leigh Malone to publish a research
-                    projected titled 'Evaluating the Effects of Drought'
-                    <li> <a
-                            href="https://www.researchgate.net/publication/356998471_Evaluating_the_Effects_of_Drought_Conditions_on_Area_Burned_in_the_Everglades">'Evaluating
-                            the Effects of Drought' Conditions on Burned Area'</a></li>
-                </p>
-                <p> May – July 2021</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-    </section>
-    <ul class="block"></ul>
+                           </div>
+                       </div>
+                  </div>
+                </div>
+             </div>
 
     <section id="projects">
         <h2> Projects</h2>
