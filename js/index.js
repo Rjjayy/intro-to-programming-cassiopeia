@@ -46,8 +46,8 @@ skillsSection = document.querySelector('#skills')
 console.log(skillsSection)
 
 // Using "DOM Selection", query the skillsSection (instead of the entire document) to find the <ul> element and store it in a variable named skillsList
-skillsList = skillsSection.nextElementSibling; // this method next ElementSibling always get the element(<ul>)next to it. 
-console.log(skillsList)
+skillsList = document.querySelector('#skillslist');
+ console.log(skillsList)
 
 //  Create a for loop to iterate over your skills Array, starting at index 0
 for (let i = 0; i < skills.length; i++) {
@@ -55,14 +55,21 @@ for (let i = 0; i < skills.length; i++) {
     skill.innerText = skills[i]
     skillsList.appendChild(skill)
 }
-//  Inside the loop, create a new list item (li) element and store it in a variable named skill
-// hint: createElement method
-//  On the next line, set the inner text of your skill variable to the value of the current Array element
-// hint: access the Array element using bracket notation
-//  On the next line, append the skill element to the skillsList element
-// hint: appendChild method
-// Save and refresh your browser
-// You should see your list of skills beneath the "Skills" heading
+
+function opentab(tabname, event) {
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+  for (tablink of tablinks) {
+    tablink.classList.remove("active-link");
+  }
+  for (tabcontent of tabcontents) {
+    tabcontent.classList.remove("active-tab");
+  }
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab")
+}
+
+
 
 // Create Message Form
 //  Open your index.html file
