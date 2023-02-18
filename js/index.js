@@ -6,7 +6,7 @@
 //  Retrieve the current year from your date object and store it in a variable named thisYear
 var today = new Date();
 console.log(today)
-var thisYear = today.getFullYear()
+var thisYear = today.getFullYear();
 console.log(today.getFullYear());
 
 // hint: getFullYear method
@@ -23,13 +23,10 @@ para.innerText = "Raheim " + thisYear;
 //  Set the inner HTML of your copyright element to display your name and the current year
 myFooter.appendChild(para)
 // hint: use thisYear variable from earlier
-//  Using "DOM Manipulation", append the copyright element to the footer
-
+//  Using "DOM Manipulation", append the copyright elemen
 
 //  List your technical skills by creating an Array of String values and store it in a variable named skills
 const skills = ["Research and reporting", "Proficient in Microsoft Excel, Word, PowerPoint", "Intermediate Knowledge of R programming", "Beginner Knowledge Java Script"];
-//  Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
-// hint: querySelector or getElementById method
 skillsSection = document.querySelector('#skills')
 console.log(skillsSection)
 
@@ -45,17 +42,20 @@ for (let i = 0; i < skills.length; i++) {
 }
 
 function opentab(tabname, event) {
-  var tablinks = document.getElementsByClassName("tab-links");
-  var tabcontents = document.getElementsByClassName("tab-contents");
-  for (tablink of tablinks) {
-    tablink.classList.remove("active-link");
+  var tablinks = document.querySelectorAll(".tab-links");
+  var tabcontents = document.querySelectorAll(".tab-contents");
+  
+  for (var i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active-link");
   }
-  for (tabcontent of tabcontents) {
-    tabcontent.classList.remove("active-tab");
+  for (var i = 0; i < tabcontents.length; i++) {
+    tabcontents[i].classList.remove("active-tab");
   }
+  
   event.currentTarget.classList.add("active-link");
-  document.getElementById(tabname).classList.add("active-tab")
+  document.getElementById(tabname).classList.add("active-tab");
 }
+
 
 
 
@@ -167,65 +167,7 @@ fetch("https://api.github.com/users/Rjjayy/repos")
       projectlist.appendChild(project);
     }
   })
-  // Add this to your JavaScript code
-var modal = document.getElementById("myModal");
-var span = document.getElementsByClassName("close")[0];
-var submitBtn = document.getElementById("submitBtn");
-var nameInput = document.getElementById("nameInput");
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
 
-// When the user clicks on the submit button, display the welcome message and increment the visitor count
-submitBtn.onclick = function() {
-  var visitorCount = parseInt(localStorage.getItem("visitorCount"));
-  if (isNaN(visitorCount)) {
-    visitorCount = 1;
-  } else {
-    visitorCount++;
-  }
-  localStorage.setItem("visitorCount", visitorCount);
-  var welcomeMsg = "Welcome, " + nameInput.value + "! You are the " + visitorCount + getOrdinalSuffix(visitorCount) + " visitor!";
-  alert(welcomeMsg);
-  modal.style.display = "none";
-}
 
-// When the user clicks on the close button, close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
 
-// Display the modal when the page loads, unless the visitor has already been welcomed
-window.onload = function() {
-  var visitorCount = parseInt(localStorage.getItem("visitorCount"));
-  if (isNaN(visitorCount) || visitorCount == 0) {
-    modal.style.display = "block";
-  }
-}
-
-// Helper function to get the correct ordinal suffix for the visitor count
-function getOrdinalSuffix(number) {
-  if (number == 11 || number == 12 || number == 13) {
-    return "th";
-  }
-  switch (number % 10) {
-    case 1:
-      return "st";
-    case 2:
-      return "nd";
-    case 3:
-      return "rd";
-    default:
-      return "th";
-  }
-}
-
-//Wrap the immage//
-<div class="message-header-container">
-  <img src="RaheimWB/Flower.png" alt="Floweronly" width="50" height="50">
-  <h3>Message</h3>
-</div>
