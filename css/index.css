@@ -468,9 +468,15 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -1000%;
+ 
   }
   
+  a {
+    color: green;
+  }
+  
+
+
   
   .project h3 {
     font-size: 1.5em;
