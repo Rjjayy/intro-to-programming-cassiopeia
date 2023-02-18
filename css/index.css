@@ -70,8 +70,15 @@ form .button{
     display: block;
     padding: 10px;
     margin: 10px;
-    background-color:whitesmoke;
+    background-color:yellowgreen;
 }
+
+.message-header-container {
+    display: flex;
+    align-items: center;
+  }
+  
+
 button:hover { /* CSS Pseudo classes to change the button style on hover, active and visited state */
     background-color:rgb(40, 37, 41);
     cursor: pointer;
@@ -79,10 +86,13 @@ button:hover { /* CSS Pseudo classes to change the button style on hover, active
 #name, #email, #message {
     margin-top: 5px;
     margin-bottom: 5px;
-
 }
 
-
+.message-header-container {
+    display: flex;
+    align-items: center;
+  }
+  
 footer {
     padding: 5px 0;
     background-color:rgb(242, 249, 26);
@@ -90,7 +100,41 @@ footer {
     margin-top: 10px;
 }
 
-
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .content {
+    min-height: calc(100% - 50px);
+    margin-bottom: -50px;
+  }
+  
+  .footer {
+    height: 50px;
+    background-color: #f5f5f5;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  
+  #wrapper {
+    min-height: 100%;
+    margin-bottom: -50px; /* height of the footer */
+  }
+  
+  #content {
+    padding-bottom: 50px; /* height of the footer */
+  }
+  
+  #myFooter {
+    height: 50px;
+  }
+  
 @media only screen and (max-width: 600px) {
     /* CSS styles for screens smaller than 600px */
 }
@@ -331,11 +375,27 @@ span{
   }
   .connectme li {
     margin: 0 10px;
+    list-style-type:none; ;
   }
   .connectme a {
     display: inline-block;
   }
 
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#Contact {
+  width: 45%;
+}
+
+.leave-message {
+  width: 45%;
+}
+
+  
 
 /* Styles for mobile devices */
 @media (max-width: 600px) {
@@ -357,3 +417,39 @@ span{
         width: 30%;
     }
 }
+
+/* Still for message */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

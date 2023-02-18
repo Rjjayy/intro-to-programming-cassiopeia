@@ -30,8 +30,8 @@
         </div>
         <div class="parent-container"> 
         <div class="images">
-            <img src="RaheimWb/Flower.png" alt="theflower" class="theflower">
-            <img src="RaheimWb/Raheim.png" alt="myface" class="myface">
+            <img src="RaheimWB/Flower.png" alt="theflower" class="theflower">
+            <img src="RaheimWB/Raheim.png" alt="myface" class="myface">
         </div>
         </div>
                          <!-------------About me -->
@@ -39,7 +39,7 @@
             <div class="container">
                 <div class="row">
                     <div class="about-col-1">
-                        <img src="Raheimwb/Raheimflower.jpeg">
+                        <img src="RaheimWB/Raheimflower.jpeg">
                     </div>
 
                     <div class="about-col-2">
@@ -79,49 +79,64 @@
                             <h2> Projects</h2>
                             <ul id="projectlis"></ul>
                 </section>
-
-                          <div class="connectme">
-                            <section id="Contact">
-                              <h3>Connect</h3>
-                              <ul>
-                                <li><a href="mailto:rgran065@fiu.edu"><i class="fa-solid fa-envelope"></i></a></li>
-                                <li><a href="https://github.com/Rjjayy"><i class="fa-brands fa-github"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/raheim-grant-539477179"><i class="fa-brands fa-linkedin"></i></a></li>
-                              </ul>
-                            </section>
-                          </div>
-                          
-                          <p>Let's get in touch. Send me a message:</p>
-            <form name="leave_message" id="leave_message" class="form-container">
-                <div class="form-item">
-
-                    <input type="text" name="Name" placeholder="Your Name" required> <!--id is used for the for attrubite.-->
-                </div>
-                <div class="form-item">
-                    <br>
-                    <input type="email" name="email" placeholder="Your Email "  id="email" required>
-                </div>
-                    <div class="form-item">
-                    <br>
-                    <input type="message" name="message" placeholder="Your Message" id="message" required>  
-                </div>
-                <div class="form-item">
-                    <br>
-
-                    <button type="submit" class=button>Submit <i class="fa-regular fa-paper-plane"></i> </button>
-                </div>
-            </form>
-        </section>
-
-     
-        <section>
+                
+                    <section id="Contact">
+                    <h3>Connect With Me</h3>
+                 
+                      
+                      <ul=div class="contact-container" >
+                        <li><a href="mailto:rgran065@fiu.edu"><i class="fa-solid fa-envelope"></i></a></li>
+                        <li><a href="https://github.com/Rjjayy"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/raheim-grant-539477179"><i class="fa-brands fa-linkedin"></i></a></li>
+                      </ul>
+                    
+                    </section>
+                    <section>
+                    <div class="leave-message">
+                      <p>Let's get in touch. Send me a message:</p>
+                      <form name="leave_message" id="leave_message" class="form-container">
+                        <div class="form-item">
+                          <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-item">
+                          <br>
+                          <input type="email" name="email" placeholder="Your Email "  id="email" required>
+                        </div>
+                        <div class="form-item">
+                          <br>
+                          <input type="message" name="message" placeholder="Your Message" id="message" required>  
+                        </div>
+                        <div class="form-item">
+                          <br>
+                          <button type="submit" class="button">Submit <i class="fa-regular fa-paper-plane"></i></button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  
+       
+                  
             <h3>Message</h3>
             <ul id="messageList"></ul>
 
         </section>
+
+    </div>
+        <div>
         <footer id="myFooter"<i> Copyright <i class="fa-regular fa-copyright"> </i></footer>
-        <i class="fa-thin fa-flower-daffodil"></i>
         <script src="js/index.js"></script> 
+    </div>
+
+        <!-- Hello Message -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Welcome, visitor!</h2>
+      <p>Please enter your name:</p>
+      <input type="text" id="nameInput" />
+      <button id="submitBtn">Submit</button>
+    </div>
+  </div>
 
 </body>
 

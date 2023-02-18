@@ -25,19 +25,7 @@ myFooter.appendChild(para)
 // hint: use thisYear variable from earlier
 //  Using "DOM Manipulation", append the copyright element to the footer
 
-// hint: appendChild method
-//  Save and refresh your browser
 
-// You should see the text "Your Name 2021" at the bottom of the page
-// Add Skills Section
-//  Open your index.html file
-//  Above the "Connect" section, add a new <section> element with an id attribute of value "skills"
-//  Inside the new section, add a <h2> element that says "Skills"
-//  After the <h2> element, add an empty unordered list (<ul>) element
-//  Save and refresh your browser
-// You should see the new "Skills" heading
-// Create List of Skills
-//  Open your index.js file
 //  List your technical skills by creating an Array of String values and store it in a variable named skills
 const skills = ["Research and reporting", "Proficient in Microsoft Excel, Word, PowerPoint", "Intermediate Knowledge of R programming", "Beginner Knowledge Java Script"];
 //  Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
@@ -70,36 +58,6 @@ function opentab(tabname, event) {
 }
 
 
-
-// Create Message Form
-//  Open your index.html file
-//  Above the <footer> element, add an empty <section> element
-//  Inside the new <section> element, create a level-two heading that says "Leave a Message"
-//  After the heading, create an HTML <form> element with a name attribute that equals "leave_message"
-//  Inside the <form> element, add the following:
-// <input> element with attributes: type "text", name "name", and required true
-// <input> element with attributes: type "email", name "email", and required true
-// <textarea> element with attributes: name "message" and required true
-// <button> element that says "Submit" and has type attribute equal to "submit"
-// Each form field should also have a corresponding <label> element
-// (Optional) Use <br> elements to stack the form fields
-//  Save and refresh your browser
-// Add Message List Section
-//  After the <section> element from the previous step, create a new <section> element with an id of "messages"
-//  Inside that element, create a level-two heading that says "Messages"
-//  After the heading, add an empty unordered list (<ul>) element
-//  Save and refresh your browser
-// Handle Message Form Submit
-//  Open your index.js file and start at the bottom
-//  Using "DOM Selection", select the "leave_message" form by name attribute and store it in a variable named messageForm
-//  Add an event listener to the messageForm element that handles the "submit" event
-// hint: addEventListener method
-//  Inside the callback function for your event listener, create a new variable for each of the three form fields and retrieve the value from the event
-// hint: event.target is the form, event.target.name is the first input element
-//  Inside the callback function for your event listener, add a console.log statement to log the three variables you created in the previous step
-//  Save and refresh your browser
-//  Fill out the HTML form in your browser and hit "Submit"
-// Note: at this point, you should notice that the browser is refreshing automatically when you submit your form which is not the desired behavior
 
 let messageForm = document.getElementsByName("leave_message")
 console.log(messageForm)
@@ -198,40 +156,6 @@ messageForm[0].addEventListener("submit", function (event) {
 //     }
 // })
 
-
-
-
-
-// #### Handle Response from Server
-
-// - [ ] Below the last line of code you just wrote, add a "load" event listener on your `githubRequest` object and pass the necessary arguments
-//   - [ ] 1. `event`: the event that is being handled (in this case, "load")
-//   - [ ] 2. `callback`: the function that runs when this event occurs
-// - [ ] Inside the callback function you just created, parse the response and store it in a variable named `repositories`
-//   - [ ] hint: `JSON.parse(this.response)`
-// - [ ] Log the value of `repositories` in the console
-// - [ ] Save and refresh your browser
-//   - You should see your list of GitHub repositories logged in the console
-
-// > Note: at this point, you have the response data but nothing is being displayed on the webpage itself
-
-// #### Display Repositories in List
-
-// - [ ] Start below the line of code you just wrote
-// - [ ] Using "DOM Selection", select the #projects section by `id` and store it in a variable named `projectSection`
-// - [ ] Using "DOM Selection", query the `projectSection` (instead of the entire `document`) to find the `<ul>` element and store it in a variable named `projectList`
-// - [ ] Create a `for` loop to iterate over your `repositories` Array, starting at index 0
-// - [ ] Inside the loop, create a new list item (`li`) element and store it in a variable named `project`
-//   - hint: `createElement` method
-// - [ ] On the next line, set the inner text of your `project` variable to the current Array element's `name` property
-//   - hint: access the Array element using bracket notation
-// - [ ] On the next line, append the `project` element to the `projectList` element
-//   - hint: `appendChild` method
-// - Save and refresh your browser
-//   - You should see your list of repositories beneath the "Projects" heading
-
-
-
 fetch("https://api.github.com/users/Rjjayy/repos")
   .then(response => response.json())
   .then(repositories => {
@@ -243,3 +167,65 @@ fetch("https://api.github.com/users/Rjjayy/repos")
       projectlist.appendChild(project);
     }
   })
+  // Add this to your JavaScript code
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+var submitBtn = document.getElementById("submitBtn");
+var nameInput = document.getElementById("nameInput");
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// When the user clicks on the submit button, display the welcome message and increment the visitor count
+submitBtn.onclick = function() {
+  var visitorCount = parseInt(localStorage.getItem("visitorCount"));
+  if (isNaN(visitorCount)) {
+    visitorCount = 1;
+  } else {
+    visitorCount++;
+  }
+  localStorage.setItem("visitorCount", visitorCount);
+  var welcomeMsg = "Welcome, " + nameInput.value + "! You are the " + visitorCount + getOrdinalSuffix(visitorCount) + " visitor!";
+  alert(welcomeMsg);
+  modal.style.display = "none";
+}
+
+// When the user clicks on the close button, close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Display the modal when the page loads, unless the visitor has already been welcomed
+window.onload = function() {
+  var visitorCount = parseInt(localStorage.getItem("visitorCount"));
+  if (isNaN(visitorCount) || visitorCount == 0) {
+    modal.style.display = "block";
+  }
+}
+
+// Helper function to get the correct ordinal suffix for the visitor count
+function getOrdinalSuffix(number) {
+  if (number == 11 || number == 12 || number == 13) {
+    return "th";
+  }
+  switch (number % 10) {
+    case 1:
+      return "st";
+    case 2:
+      return "nd";
+    case 3:
+      return "rd";
+    default:
+      return "th";
+  }
+}
+
+//Wrap the immage//
+<div class="message-header-container">
+  <img src="RaheimWB/Flower.png" alt="Floweronly" width="50" height="50">
+  <h3>Message</h3>
+</div>
