@@ -70,8 +70,15 @@ form .button{
     display: block;
     padding: 10px;
     margin: 10px;
-    background-color:whitesmoke;
+    background-color:yellowgreen;
 }
+
+.message-header-container {
+    display: flex;
+    align-items: center;
+  }
+  
+
 button:hover { /* CSS Pseudo classes to change the button style on hover, active and visited state */
     background-color:rgb(40, 37, 41);
     cursor: pointer;
@@ -79,10 +86,13 @@ button:hover { /* CSS Pseudo classes to change the button style on hover, active
 #name, #email, #message {
     margin-top: 5px;
     margin-bottom: 5px;
-
 }
 
-
+.message-header-container {
+    display: flex;
+    align-items: center;
+  }
+  
 footer {
     padding: 5px 0;
     background-color:rgb(242, 249, 26);
@@ -90,7 +100,41 @@ footer {
     margin-top: 10px;
 }
 
-
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .content {
+    min-height: calc(100% - 50px);
+    margin-bottom: -50px;
+  }
+  
+  .footer {
+    height: 50px;
+    background-color: #f5f5f5;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  
+  #wrapper {
+    min-height: 100%;
+    margin-bottom: -50px; /* height of the footer */
+  }
+  
+  #content {
+    padding-bottom: 50px; /* height of the footer */
+  }
+  
+  #myFooter {
+    height: 50px;
+  }
+  
 @media only screen and (max-width: 600px) {
     /* CSS styles for screens smaller than 600px */
 }
@@ -159,16 +203,15 @@ nav ul li a {
 }
 .form-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-   
+    margin-top: 20px;
+  }
 
-}
-
-.form-item {
+  .form-item {
     width: 100%;
     margin-bottom: 10px;
-}
+  }
 
 
 
@@ -322,19 +365,141 @@ span{
   .tab-contents#education ul {
     margin-top: -45px;
   }
-  
+ 
+ 
 
-  .connectme {
-    list-style: none;
+
+.contact-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form h2 {
+    color:black;
+  }
+  
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #projects {
+    margin-top: 50px;
+  }
+  
+  #Contact {
+    margin-top: 50px;
+  }
+  
+  .contact-container {
     display: flex;
     justify-content: center;
   }
-  .connectme li {
-    margin: 0 10px;
+  .connect-title {
+    text-align: center;
   }
-  .connectme a {
-    display: inline-block;
+  
+  .leave-message {
+    margin-top: 50px;
   }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .form-item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  
+.leave-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+  }
+
+.contactme{
+    float: right;
+  margin-right: 20px;
+    color: black;
+}
+
+  .contact-container li {
+  margin: 0 10px;
+  list-style-type:none;
+  display: inline-block; /* added this line */
+  justify-content: center;
+  align-items: center;
+
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.projectlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .projectlist li {
+    margin-bottom: 10px;
+    list-style-type: none !important;
+    color: black;
+
+  }
+  
+  .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+  }
+  
+  a {
+    color: green;
+  }
+  
+
+
+  
+  .project h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .project p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  
+  section { 
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center; /* add this line */
+}
+
+ul.projectlist {
+    list-style-type: none;
+    padding: 0; /* add this line */
+    margin: 0; /* add this line */
+}
 
 
 /* Styles for mobile devices */
@@ -357,3 +522,6 @@ span{
         width: 30%;
     }
 }
+
+
+  

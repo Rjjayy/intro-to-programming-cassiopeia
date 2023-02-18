@@ -18,6 +18,7 @@
                     <li><a href="#websiteHeader">Home</a></li>
                     <li><a href="#aboutme">About</a></li>
                     <li><a href="#Contact">Connect</a></li>
+                    <li><a href="#projects">Projects</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,101 +31,112 @@
         </div>
         <div class="parent-container"> 
         <div class="images">
-            <img src="RaheimWb/Flower.png" alt="theflower" class="theflower">
-            <img src="RaheimWb/Raheim.png" alt="myface" class="myface">
+            <img src="RaheimWB/Flower.png" alt="theflower" class="theflower">
+            <img src="RaheimWB/Raheim.png" alt="myface" class="myface">
         </div>
         </div>
                          <!-------------About me -->
-        <div id="aboutme">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="Raheimwb/Raheimflower.jpeg">
-                    </div>
+                         <div id="aboutme">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="about-col-1">
+                                        <img src="RaheimWB/Raheimflower.jpeg">
+                                    </div>
+                                    <div class="about-col-2">
+                                        <h2 class="subh1"> About Me</h2>
+                                        <p class="text">My name is Raheim Grant. I am originally from Jamaica and now I live in the United States of America. An enthusiastic, passionate, and friendly student, learner, and teacher, I am dedicated to all things educational. I am always interested in learning new things, including programming languages, languages, as well as cultural and research facts. As part of my hobbies, I enjoy playing the ukulele, spending time in nature, and riding my longboard.</p>
+                                        <div class="tab-titles">
+                                            <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                                            <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+                                            <p class="tab-links" onclick="opentab('education', event)">Education</p>
+                                          
+                                        </div>
+                                        <div class="tab-contents active-tab" id="skills">
+                                            <ul id="skillslist"></ul>
+                                        </div>
+                                        <div class="tab-contents" id="experience">
+                                            <ul>
+                                                <li><span>2022-Current</span><br>Freelance English Tutor on Amazing Talker</li> 
+                                                <li><a href="https://en.amazingtalker.com/teachers-and-tutors/raheim-grant" target="_blank">My Teacher Profile</a></li>
 
-                    <div class="about-col-2">
-                        <h2 class="subh1"> About Me</h2>
-                        <p class="text">My name is Raheim Grant. I am originally from Jamaica and now I live in the United States of America. An enthusiastic, passionate, and friendly student, learner, and teacher, I am dedicated to all things educational. I am always interested in learning new things, including programming languages, languages, as well as cultural and research facts. As part of my hobbies, I enjoy playing the ukulele, spending time in nature, and riding my longboard.</p>
+                                                <br>
+                                                <li><span>January 2020 – June 2022</span><br>Volunteered as an Ecology Peer Leader at Florida International University</li>
+                                                <li><a href="https://pltl.fiu.edu/?page_id=308">April 2022 Peer Leader Spotlight</a></li>
+                                                <br>
+                                                <li><span>May – July 2021</span><br>Research Interned at the Marlone Disturbance Lab. Collected, Analyzed Data and Cooperated with fellow student researchers and professor Sparkle Leigh Malone to publish a research projected titled 'Evaluating the Effects of Drought'</li>
+                                                <li><a href="https://www.researchgate.net/publication/356998471_Evaluating_the_Effects_of_Drought_Conditions_on_Area_Burned_in_the_Everglades">'Evaluating the Effects of Drought' Conditions on Burned Area'</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-contents" id="education">
+                                            <ul>
+                                                <li><span>2018</span><br>Valencia Community College</li>
+                                                <br>
+                                                <li><span>2023</span><br>Certification in Introduction to Programming</li>
+                                                <br>
+                                                <li><span>Current</span><br>Bachelor's degree in Biological Science and Anthropology and Sociology at Florida International University</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
-                            <p class="tab-links" onclick="opentab('education', event)">Education</p>
+
+                        <img src="RaheimWB/Flowersol.png" alt="Floweronly" width="200" height="200" style="display: block; margin: 0 auto;">
+                       
+                       
+                        <section id="projects">
+                            <h2>Projects</h2>
+                            <ul class="projectlist"></ul>
+                          </section>
+                          
+                          <img src="RaheimWB/Floname.png" alt="Floweronly" width="200" height="200" style="display: block; margin: 0 auto; cursor: pointer;" title="Projects can be found on my GitHub">
+                          <div class="container">
+                            <div id="Contact">
+                              <h3>Connect With Me</h3>
+                              <div class="contact-container">
+                                <ul>
+                                  <li><a href="mailto:rgran065@fiu.edu"><i class="fa-solid fa-envelope"></i></a></li>
+                                  <li><a href="https://github.com/Rjjayy"><i class="fa-brands fa-github"></i></a></li>
+                                  <li><a href="https://www.linkedin.com/in/raheim-grant-539477179"><i class="fa-brands fa-linkedin"></i></a></li>
+                                </ul>
+                              </div>
+                            </div>
                           </div>
                           
-                          <div class="tab-contents active-tab" id="skills">
-                            <ul id="skillslist"></ul>
+                          <div class="leave-message">
+                            <p class="contactme">Let's get in touch. Send me a message:</p>
+                            <form name="leave_message" id="leave_message" class="form-container">
+                              <div class="form-item">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                              </div>
+                              <div class="form-item">
+                                <br>
+                                <input type="email" name="email" placeholder="Your Email "  id="email" required>
+                              </div>
+                              <div class="form-item">
+                                <br>
+                                <input type="message" name="message" placeholder="Your Message" id="message" required>  
+                              </div>
+                              <div class="form-item">
+                                <br>
+                                <button type="submit" class="button">Submit <i class="fa-regular fa-paper-plane"></i></button>
+                              </div>
+                            </form>
                           </div>
                           
-                          <div class="tab-contents" id="experience">
-                            <ul>
-                              <li><span>2022 - Current</span><br>Freelance English Tutor on Amazing Talker</li>
-                              <li><a href="https://en.amazingtalker.com/teachers-and-tutors/raheim-grant">My Teacher Profile</a></li>
-                              <li><span>January 2020 – June 2022</span><br>Volunteered as an Ecology Peer Leader at Florida International University</li>
-                              <li><a href="https://pltl.fiu.edu/?page_id=308">April 2022 Peer Leader Spotlight</a></li>
-                              <li><span>May – July 2021</span><br>Research Interned at the Marlone Disturbance Lab. Collected, Analyzed Data and Cooperated with fellow student researchers and professor Sparkle Leigh Malone to publish a research projected titled 'Evaluating the Effects of Drought'</li>
-                              <li><a href="https://www.researchgate.net/publication/356998471_Evaluating_the_Effects_of_Drought_Conditions_on_Area_Burned_in_the_Everglades">'Evaluating the Effects of Drought' Conditions on Burned Area'</a></li>
-                            </ul>
+                          <section>
+
+                          <div class="message-header-container">
+                            <img src="RaheimWB/Flower.png" alt="Floweronly" width="50" height="50">
+                            <h3>Message</h3>
+                            <ul id="messageList"></ul>
                           </div>
-                          
-                          <div class="tab-contents" id="education">
-                            <ul>
-                              <li><span>2018</span><br>Valencia Community College</li>
-                              <li><span>2023</span><br>Certification in Introduction to Programming</li>
-                              <li><span>Current</span><br>Bachelor's degree in Biological Science and Anthropology and Sociology at Florida International University</li>
-                            </ul>
-                          </div>
-
-                          <section id="projects">
-                            <h2> Projects</h2>
-                            <ul id="projectlis"></ul>
-                </section>
-
-                          <div class="connectme">
-                            <section id="Contact">
-                              <h3>Connect</h3>
-                              <ul>
-                                <li><a href="mailto:rgran065@fiu.edu"><i class="fa-solid fa-envelope"></i></a></li>
-                                <li><a href="https://github.com/Rjjayy"><i class="fa-brands fa-github"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/raheim-grant-539477179"><i class="fa-brands fa-linkedin"></i></a></li>
-                              </ul>
-                            </section>
-                          </div>
-                          
-                          <p>Let's get in touch. Send me a message:</p>
-            <form name="leave_message" id="leave_message" class="form-container">
-                <div class="form-item">
-
-                    <input type="text" name="Name" placeholder="Your Name" required> <!--id is used for the for attrubite.-->
-                </div>
-                <div class="form-item">
-                    <br>
-                    <input type="email" name="email" placeholder="Your Email "  id="email" required>
-                </div>
-                    <div class="form-item">
-                    <br>
-                    <input type="message" name="message" placeholder="Your Message" id="message" required>  
-                </div>
-                <div class="form-item">
-                    <br>
-
-                    <button type="submit" class=button>Submit <i class="fa-regular fa-paper-plane"></i> </button>
-                </div>
-            </form>
-        </section>
-
-     
-        <section>
-            <h3>Message</h3>
-            <ul id="messageList"></ul>
-
-        </section>
+                           </section>
+                  
+    
+        <div>
         <footer id="myFooter"<i> Copyright <i class="fa-regular fa-copyright"> </i></footer>
-        <i class="fa-thin fa-flower-daffodil"></i>
         <script src="js/index.js"></script> 
-
-</body>
-
-
-
+    </div>
 </html>
